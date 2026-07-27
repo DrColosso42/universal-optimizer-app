@@ -1,6 +1,8 @@
 import argparse
 from random import seed
+import logging
 
+logging.disable(logging.DEBUG)
 from uo.algorithm.metaheuristic.finish_control import FinishControl
 
 from uo.algorithm.metaheuristic.variable_neighborhood_search.vns_shaking_support_standard_int import (
@@ -323,3 +325,5 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+    
