@@ -11,3 +11,4 @@ Problems to be solved
     problems_to_be_solved_function_one_variable_max
     problems_to_be_solved_drug_discovery_problem
     problems_to_be_solved_knapsack_problem
+    problems_to_be_solved_traveling_thief_problem
