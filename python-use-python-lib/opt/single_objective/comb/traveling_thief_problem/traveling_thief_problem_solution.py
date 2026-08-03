@@ -143,6 +143,10 @@ class TravelingThiefProblemSolution(Solution[TtpRepresentation, str]):
 
         tour = representation.tour
         packing = representation.packing
+        if len(tour) != problem.n:
+            raise ValueError("Tour length must match problem.n.")
+        if len(packing) != problem.m:
+            raise ValueError("Packing length must match problem.m.")
 
         total_weight = sum(
             item.weight for item in problem.items if packing[item.index]
@@ -309,9 +313,12 @@ class TravelingThiefProblemSolution(Solution[TtpRepresentation, str]):
         """
         Native solution representation from its string representation.
         """
-        tour_part, packing_part = representation_str.split("|")
-        tour = [int(x) for x in tour_part.split("=")[1].split(",")]
-        packing_bits = packing_part.split("=")[1]
+        tour_part, packing_part = representation_str.split("|", 1)
+        tour_str = tour_part.split("=", 1)[1].strip()
+        if tour_str.startswith("[") and tour_str.endswith("]"):
+            tour_str = tour_str[1:-1]
+        tour = [int(x.strip()) for x in tour_str.split(",") if x.strip()]
+        packing_bits = packing_part.split("=", 1)[1].strip()
         return TtpRepresentation(tour, BitArray(bin=packing_bits))
 
     @staticmethod
