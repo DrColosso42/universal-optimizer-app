@@ -24,6 +24,9 @@ from opt.single_objective.comb.traveling_thief_problem.traveling_thief_problem i
     TravelingThiefProblem,
 )
 from opt.single_objective.comb.traveling_thief_problem.traveling_thief_problem_solution import (
+    TravelingThiefProblemSolution,
+)
+from opt.single_objective.comb.traveling_thief_problem.traveling_thief_problem_solution import (
     TtpRepresentation,
 )
 
@@ -48,6 +51,8 @@ class TravelingThiefProblemAcoConstructionSupport(AcoConstructionSupport):
         """
         if not isinstance(problem, TravelingThiefProblem):
             raise TypeError("Parameter 'problem' must have type 'TravelingThiefProblem'.")
+        if not isinstance(solution, TravelingThiefProblemSolution):
+            raise TypeError("Parameter 'solution' must have type 'TravelingThiefProblemSolution'.")
 
         n = problem.n
         tour = [0]
@@ -64,7 +69,10 @@ class TravelingThiefProblemAcoConstructionSupport(AcoConstructionSupport):
                         (optimizer.eta[current][j] ** optimizer.beta)
                     candidates.append(j)
                     weights.append(w)
-            next_city = choices(candidates, weights=weights, k=1)[0]
+            if sum(weights) <= 0.0:
+                next_city = choices(candidates, k=1)[0]
+            else:
+                next_city = choices(candidates, weights=weights, k=1)[0]
             tour.append(next_city)
             visited[next_city] = True
 
@@ -78,6 +86,8 @@ class TravelingThiefProblemAcoConstructionSupport(AcoConstructionSupport):
         """
         if not isinstance(problem, TravelingThiefProblem):
             raise TypeError("Parameter 'problem' must have type 'TravelingThiefProblem'.")
+        if not isinstance(solution, TravelingThiefProblemSolution):
+            raise TypeError("Parameter 'solution' must have type 'TravelingThiefProblemSolution'.")
 
         tour = solution.representation.tour
         packing = solution.representation.packing
