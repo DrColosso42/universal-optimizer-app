@@ -86,9 +86,12 @@ class TravelingThiefProblem(Problem):
 
         self.__items_by_city: dict[int, list[TtpItem]] = {i: [] for i in range(self.__n)}
         for item in items:
+            if item.city not in self.__items_by_city:
+                raise ValueError(f"Item city index out of range: {item.city}")
             self.__items_by_city[item.city].append(item)
 
-        self.__distances = self.__compute_distances(cities, edge_weight_type)
+        self.__edge_weight_type = edge_weight_type
+        self.__distances = self.__compute_distances(cities, self.__edge_weight_type)
 
     @staticmethod
     def __compute_distances(
@@ -123,6 +126,7 @@ class TravelingThiefProblem(Problem):
             v_min=self.__v_min,
             v_max=self.__v_max,
             renting_rate=self.__renting_rate,
+            edge_weight_type=self.__edge_weight_type,
         )
 
     @classmethod
