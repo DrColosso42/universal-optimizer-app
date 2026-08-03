@@ -62,7 +62,7 @@ def solve_aco(
     method: str,
     random_seed: int,
     iterations_max: int,
-    n_ants: int,
+    n_ants: int | None,
     alpha: float,
     beta: float,
     rho: float,
