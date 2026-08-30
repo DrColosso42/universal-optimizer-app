@@ -7,8 +7,10 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
+   opt.single_objective.glob.branin_min_problem
+
    opt.single_objective.glob.function_one_variable_max_problem
-   
+
    opt.single_objective.glob.function_one_variable_min_problem
 
 Module contents

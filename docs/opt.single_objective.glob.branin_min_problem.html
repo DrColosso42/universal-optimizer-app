@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>opt.single_objective.glob.branin_min_problem package &mdash; Optimization Algorithms Library 0.1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=01f34227"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="opt.single_objective.glob.function_one_variable_max_problem package" href="opt.single_objective.glob.function_one_variable_max_problem.html" />
+    <link rel="prev" title="opt.single_objective.glob package" href="opt.single_objective.glob.html" />
+</head>
+
+<body class="wy-body-for-nav">
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+
+
+          <a href="index.html" class="icon icon-home">
+            Optimization Algorithms Library
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Tutorials and How-To Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how_to_guides.html">Installing the application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how_to_guides.html#running-of-all-the-unit-tests-within-application">Running of all the unit tests within application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how_to_guides.html#building-documentation-for-the-application">Building documentation for the application</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">In-depth Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="problems_to_be_solved.html">Problems to be solved</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Program code</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Optimization</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="opt.html">opt package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="opt.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="opt.multi_objective.html">opt.multi_objective package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="opt.single_objective.html">opt.single_objective package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="opt.html#module-opt">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Changelog and Contribution</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribution.html">How to Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribution.html#contributors">Contributors</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Optimization Algorithms Library</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">Optimization</a></li>
+          <li class="breadcrumb-item"><a href="opt.html">opt package</a></li>
+          <li class="breadcrumb-item"><a href="opt.single_objective.html">opt.single_objective package</a></li>
+          <li class="breadcrumb-item"><a href="opt.single_objective.glob.html">opt.single_objective.glob package</a></li>
+      <li class="breadcrumb-item active">opt.single_objective.glob.branin_min_problem package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/opt.single_objective.glob.branin_min_problem.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+
+  <section id="opt-single-objective-glob-branin-min-problem-package">
+<h1>opt.single_objective.glob.branin_min_problem package<a class="headerlink" href="#opt-single-objective-glob-branin-min-problem-package" title="Link to this heading"></a></h1>
+<section id="module-opt.single_objective.glob.branin_min_problem.branin_min_problem">
+<span id="problem"></span><h2>Problem<a class="headerlink" href="#module-opt.single_objective.glob.branin_min_problem.branin_min_problem" title="Link to this heading"></a></h2>
+<p>Definition of the bounded, two-dimensional Branin minimization problem.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="opt.single_objective.glob.branin_min_problem.branin_min_problem.BraninMinProblem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">opt.single_objective.glob.branin_min_problem.branin_min_problem.</span></span><span class="sig-name descname"><span class="pre">BraninMinProblem</span></span><a class="headerlink" href="#opt.single_objective.glob.branin_min_problem.branin_min_problem.BraninMinProblem" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Problem</span></code></p>
+<p>Standard Branin-Hoo benchmark problem.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="opt.single_objective.glob.branin_min_problem.branin_min_problem.BraninMinProblem.KNOWN_MINIMUM">
+<span class="sig-name descname"><span class="pre">KNOWN_MINIMUM</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0.39788735772973816</span></em><a class="headerlink" href="#opt.single_objective.glob.branin_min_problem.branin_min_problem.BraninMinProblem.KNOWN_MINIMUM" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="opt.single_objective.glob.branin_min_problem.branin_min_problem.BraninMinProblem.bounds">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">bounds</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ndarray</span></em><a class="headerlink" href="#opt.single_objective.glob.branin_min_problem.branin_min_problem.BraninMinProblem.bounds" title="Link to this definition"></a></dt>
+<dd><p>Return a copy of the lower and upper bounds.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opt.single_objective.glob.branin_min_problem.branin_min_problem.BraninMinProblem.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#opt.single_objective.glob.branin_min_problem.branin_min_problem.BraninMinProblem" title="opt.single_objective.glob.branin_min_problem.branin_min_problem.BraninMinProblem"><span class="pre">BraninMinProblem</span></a></span></span><a class="headerlink" href="#opt.single_objective.glob.branin_min_problem.branin_min_problem.BraninMinProblem.copy" title="Link to this definition"></a></dt>
+<dd><p>Return an independent problem instance.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="opt.single_objective.glob.branin_min_problem.branin_min_problem.BraninMinProblem.dimension">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dimension</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></em><a class="headerlink" href="#opt.single_objective.glob.branin_min_problem.branin_min_problem.BraninMinProblem.dimension" title="Link to this definition"></a></dt>
+<dd><p>Return the number of decision variables.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="opt.single_objective.glob.branin_min_problem.branin_min_problem.BraninMinProblem.known_minimizers">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">known_minimizers</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ndarray</span></em><a class="headerlink" href="#opt.single_objective.glob.branin_min_problem.branin_min_problem.BraninMinProblem.known_minimizers" title="Link to this definition"></a></dt>
+<dd><p>Return copies of the three known global minimizers.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="opt.single_objective.glob.branin_min_problem.branin_min_problem.BraninMinProblem.known_minimum">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">known_minimum</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></em><a class="headerlink" href="#opt.single_objective.glob.branin_min_problem.branin_min_problem.BraninMinProblem.known_minimum" title="Link to this definition"></a></dt>
+<dd><p>Return the objective value at every global minimizer.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opt.single_objective.glob.branin_min_problem.branin_min_problem.BraninMinProblem.string_rep">
+<span class="sig-name descname"><span class="pre">string_rep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">delimiter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">indentation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indentation_symbol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'{'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_end</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'}'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#opt.single_objective.glob.branin_min_problem.branin_min_problem.BraninMinProblem.string_rep" title="Link to this definition"></a></dt>
+<dd><p>Return a string representation of the problem.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-opt.single_objective.glob.branin_min_problem.branin_min_problem_real_solution">
+<span id="real-vector-solution"></span><h2>Real-vector solution<a class="headerlink" href="#module-opt.single_objective.glob.branin_min_problem.branin_min_problem_real_solution" title="Link to this heading"></a></h2>
+<p>Real-vector solution for the Branin minimization problem.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="opt.single_objective.glob.branin_min_problem.branin_min_problem_real_solution.BraninMinProblemRealSolution">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">opt.single_objective.glob.branin_min_problem.branin_min_problem_real_solution.</span></span><span class="sig-name descname"><span class="pre">BraninMinProblemRealSolution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opt.single_objective.glob.branin_min_problem.branin_min_problem_real_solution.BraninMinProblemRealSolution" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Solution</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ndarray</span></code>]</p>
+<p>Branin solution represented by <code class="docutils literal notranslate"><span class="pre">[x1,</span> <span class="pre">x2]</span></code> real coordinates.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="opt.single_objective.glob.branin_min_problem.branin_min_problem_real_solution.BraninMinProblemRealSolution.argument">
+<span class="sig-name descname"><span class="pre">argument</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">representation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#opt.single_objective.glob.branin_min_problem.branin_min_problem_real_solution.BraninMinProblemRealSolution.argument" title="Link to this definition"></a></dt>
+<dd><p>Return a copy of the represented Branin coordinates.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opt.single_objective.glob.branin_min_problem.branin_min_problem_real_solution.BraninMinProblemRealSolution.calculate_quality_directly">
+<span class="sig-name descname"><span class="pre">calculate_quality_directly</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">representation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">problem</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#opt.single_objective.glob.branin_min_problem.branin_min_problem.BraninMinProblem" title="opt.single_objective.glob.branin_min_problem.branin_min_problem.BraninMinProblem"><span class="pre">BraninMinProblem</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">QualityOfSolution</span></span></span><a class="headerlink" href="#opt.single_objective.glob.branin_min_problem.branin_min_problem_real_solution.BraninMinProblemRealSolution.calculate_quality_directly" title="Link to this definition"></a></dt>
+<dd><p>Calculate the Branin objective and corresponding maximized fitness.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opt.single_objective.glob.branin_min_problem.branin_min_problem_real_solution.BraninMinProblemRealSolution.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#opt.single_objective.glob.branin_min_problem.branin_min_problem_real_solution.BraninMinProblemRealSolution" title="opt.single_objective.glob.branin_min_problem.branin_min_problem_real_solution.BraninMinProblemRealSolution"><span class="pre">BraninMinProblemRealSolution</span></a></span></span><a class="headerlink" href="#opt.single_objective.glob.branin_min_problem.branin_min_problem_real_solution.BraninMinProblemRealSolution.copy" title="Link to this definition"></a></dt>
+<dd><p>Return an independent copy of the solution.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opt.single_objective.glob.branin_min_problem.branin_min_problem_real_solution.BraninMinProblemRealSolution.copy_from">
+<span class="sig-name descname"><span class="pre">copy_from</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">original</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Solution</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#opt.single_objective.glob.branin_min_problem.branin_min_problem_real_solution.BraninMinProblemRealSolution.copy_from" title="Link to this definition"></a></dt>
+<dd><p>Copy all solution state from another solution.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opt.single_objective.glob.branin_min_problem.branin_min_problem_real_solution.BraninMinProblemRealSolution.init_from">
+<span class="sig-name descname"><span class="pre">init_from</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">representation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">problem</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#opt.single_objective.glob.branin_min_problem.branin_min_problem.BraninMinProblem" title="opt.single_objective.glob.branin_min_problem.branin_min_problem.BraninMinProblem"><span class="pre">BraninMinProblem</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#opt.single_objective.glob.branin_min_problem.branin_min_problem_real_solution.BraninMinProblemRealSolution.init_from" title="Link to this definition"></a></dt>
+<dd><p>Initialize from a finite, in-bounds two-dimensional vector.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opt.single_objective.glob.branin_min_problem.branin_min_problem_real_solution.BraninMinProblemRealSolution.init_random">
+<span class="sig-name descname"><span class="pre">init_random</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">problem</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#opt.single_objective.glob.branin_min_problem.branin_min_problem.BraninMinProblem" title="opt.single_objective.glob.branin_min_problem.branin_min_problem.BraninMinProblem"><span class="pre">BraninMinProblem</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#opt.single_objective.glob.branin_min_problem.branin_min_problem_real_solution.BraninMinProblemRealSolution.init_random" title="Link to this definition"></a></dt>
+<dd><p>Initialize a reproducible uniformly sampled point.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opt.single_objective.glob.branin_min_problem.branin_min_problem_real_solution.BraninMinProblemRealSolution.native_representation">
+<span class="sig-name descname"><span class="pre">native_representation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">representation_str</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ndarray</span></span></span><a class="headerlink" href="#opt.single_objective.glob.branin_min_problem.branin_min_problem_real_solution.BraninMinProblemRealSolution.native_representation" title="Link to this definition"></a></dt>
+<dd><p>Parse coordinates such as <code class="docutils literal notranslate"><span class="pre">[-3.14,</span> <span class="pre">12.275]</span></code>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opt.single_objective.glob.branin_min_problem.branin_min_problem_real_solution.BraninMinProblemRealSolution.representation_distance_directly">
+<span class="sig-name descname"><span class="pre">representation_distance_directly</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">representation_1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">representation_2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ndarray</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></span><a class="headerlink" href="#opt.single_objective.glob.branin_min_problem.branin_min_problem_real_solution.BraninMinProblemRealSolution.representation_distance_directly" title="Link to this definition"></a></dt>
+<dd><p>Return Euclidean distance between two Branin vectors.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="opt.single_objective.glob.html" class="btn btn-neutral float-left" title="opt.single_objective.glob package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="opt.single_objective.glob.function_one_variable_max_problem.html" class="btn btn-neutral float-right" title="opt.single_objective.glob.function_one_variable_max_problem package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Vladimir Filipovic.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+</body>
+</html>

@@ -9,6 +9,6 @@ Problems to be solved
     problems_to_be_solved_minimum_multi_cut
     problems_to_be_solved_set_covering_problem
     problems_to_be_solved_function_one_variable_max
+    problems_to_be_solved_branin
     problems_to_be_solved_drug_discovery_problem
     problems_to_be_solved_knapsack_problem
-    problems_to_be_solved_traveling_thief_problem

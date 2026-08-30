@@ -15,3 +15,8 @@ Changelog
 
 :Date: 01.07.2023. 
 :Description: Documentation support is added.
+
+**Version `0.1.5`**
+
+:Date: 12.06.2026.
+:Description: Branin minimization problem and Bayesian optimization example are added.
