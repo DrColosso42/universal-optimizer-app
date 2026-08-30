@@ -1,4 +1,4 @@
-﻿astroid==3.3.11
+astroid==3.3.11
 bitarray==3.8.0
 bitstring==4.3.1
 Bottleneck==1.6.0
@@ -61,5 +61,5 @@ tomlkit==0.14.0
 toolz==1.1.0
 tqdm==4.67.1
 tzdata==2025.3
-urllib3==2.6.3
+urllib3==2.7.0
 xarray==2025.12.0
