@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>opt.single_objective.comb.graph_coloring_problem package &mdash; Optimization Algorithms Library 0.1.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=01f34227"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Optimization Algorithms Library
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Tutorials and How-To Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how_to_guides.html">Installing the application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how_to_guides.html#running-of-all-the-unit-tests-within-application">Running of all the unit tests within application</a></li>
+<li class="toctree-l1"><a class="reference internal" href="how_to_guides.html#building-documentation-for-the-application">Building documentation for the application</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">In-depth Information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="problems_to_be_solved.html">Problems to be solved</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Program code</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Optimization</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Changelog and Contribution</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribution.html">How to Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contribution.html#contributors">Contributors</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Optimization Algorithms Library</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">opt.single_objective.comb.graph_coloring_problem package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/opt.single_objective.comb.graph_coloring_problem.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="opt-single-objective-comb-graph-coloring-problem-package">
+<h1>opt.single_objective.comb.graph_coloring_problem package<a class="headerlink" href="#opt-single-objective-comb-graph-coloring-problem-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem">
+<span id="opt-single-objective-comb-graph-coloring-problem-graph-coloring-problem-module"></span><h2>opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem module<a class="headerlink" href="#module-opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem" title="Link to this heading"></a></h2>
+<dl class="py class" id="py-graph-coloring-problem">
+<dt class="sig sig-object py" id="opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem.GraphColoringProblem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem.</span></span><span class="sig-name descname"><span class="pre">GraphColoringProblem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number_of_vertices</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">edges</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem.GraphColoringProblem" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Problem</span></code></p>
+<p>Class representing the Graph Coloring Problem.</p>
+<p>The problem is defined by:
+- number of vertices
+- graph edges</p>
+<p>A feasible solution assigns colors to vertices so that no two adjacent
+vertices have the same color. The goal is to minimize the number of used
+colors while maintaining a valid coloring.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem.GraphColoringProblem.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem.GraphColoringProblem" title="opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem.GraphColoringProblem"><span class="pre">GraphColoringProblem</span></a></span></span><a class="headerlink" href="#opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem.GraphColoringProblem.copy" title="Link to this definition"></a></dt>
+<dd><p>Copy the target problem.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem.GraphColoringProblem.dimension">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dimension</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></em><a class="headerlink" href="#opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem.GraphColoringProblem.dimension" title="Link to this definition"></a></dt>
+<dd><p>Property getter for problem dimension.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem.GraphColoringProblem.edges">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">edges</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem.GraphColoringProblem.edges" title="Link to this definition"></a></dt>
+<dd><p>Property getter for graph edges.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem.GraphColoringProblem.from_input_file">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_input_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input_file_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem.GraphColoringProblem" title="opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem.GraphColoringProblem"><span class="pre">GraphColoringProblem</span></a></span></span><a class="headerlink" href="#opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem.GraphColoringProblem.from_input_file" title="Link to this definition"></a></dt>
+<dd><p>Additional constructor. Create new <cite>GraphColoringProblem</cite> instance
+when input file and input format are specified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>input_file_path</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><em>str</em></a>) – path to the input file</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>class instance</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem.GraphColoringProblem" title="opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem.GraphColoringProblem">GraphColoringProblem</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem.GraphColoringProblem.from_number_of_vertices_and_edges">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_number_of_vertices_and_edges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">number_of_vertices</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">edges</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem.GraphColoringProblem" title="opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem.GraphColoringProblem"><span class="pre">GraphColoringProblem</span></a></span></span><a class="headerlink" href="#opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem.GraphColoringProblem.from_number_of_vertices_and_edges" title="Link to this definition"></a></dt>
+<dd><p>Additional constructor when number of vertices and edges are specified.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem.GraphColoringProblem.number_of_vertices">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">number_of_vertices</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></em><a class="headerlink" href="#opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem.GraphColoringProblem.number_of_vertices" title="Link to this definition"></a></dt>
+<dd><p>Property getter for number of graph vertices.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem.GraphColoringProblem.string_rep">
+<span class="sig-name descname"><span class="pre">string_rep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">delimiter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">indentation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indentation_symbol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'{'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_end</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'}'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem.GraphColoringProblem.string_rep" title="Link to this definition"></a></dt>
+<dd><p>String representation of the <cite>GraphColoringProblem</cite> instance.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution">
+<span id="opt-single-objective-comb-graph-coloring-problem-graph-coloring-problem-int-solution-module"></span><h2>opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution module<a class="headerlink" href="#module-opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution" title="Link to this heading"></a></h2>
+<dl class="py class" id="py-graph-coloring-problem-int-solution">
+<dt class="sig sig-object py" id="opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution.GraphColoringProblemIntSolution">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution.</span></span><span class="sig-name descname"><span class="pre">GraphColoringProblemIntSolution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">colors_count</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">evaluation_cache_is_used</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">evaluation_cache_max_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance_calculation_cache_is_used</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">distance_calculation_cache_max_size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution.GraphColoringProblemIntSolution" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Solution</span></code>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">int</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]</p>
+<p>Integer-encoded solution for the Graph Coloring Problem.</p>
+<p>The whole coloring is stored as one integer. Each vertex color is encoded
+using a fixed number of bits.</p>
+<p>The maximum number of available colors is equal to the number of graph
+vertices. The objective is to find a valid coloring that uses as few
+colors as possible.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution.GraphColoringProblemIntSolution.argument">
+<span class="sig-name descname"><span class="pre">argument</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">representation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution.GraphColoringProblemIntSolution.argument" title="Link to this definition"></a></dt>
+<dd><p>Convert internal representation to solution code.</p>
+<p>Since the number of available colors is equal to the number of
+vertices, colors_count is also the number of colors that must be
+decoded for printing.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution.GraphColoringProblemIntSolution.calculate_quality_directly">
+<span class="sig-name descname"><span class="pre">calculate_quality_directly</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">representation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">problem</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem.GraphColoringProblem" title="opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem.GraphColoringProblem"><span class="pre">GraphColoringProblem</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">QualityOfSolution</span></span></span><a class="headerlink" href="#opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution.GraphColoringProblemIntSolution.calculate_quality_directly" title="Link to this definition"></a></dt>
+<dd><p>Calculate the quality of a graph coloring.</p>
+<p>Invalid encoded colors receive the largest penalty. Conflicting
+adjacent vertices receive the next largest penalty. Among valid
+conflict-free colorings, the solution using fewer colors is better.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution.GraphColoringProblemIntSolution.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution.GraphColoringProblemIntSolution" title="opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution.GraphColoringProblemIntSolution"><span class="pre">GraphColoringProblemIntSolution</span></a></span></span><a class="headerlink" href="#opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution.GraphColoringProblemIntSolution.copy" title="Link to this definition"></a></dt>
+<dd><p>Internal copy of the solution.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution.GraphColoringProblemIntSolution.copy_from">
+<span class="sig-name descname"><span class="pre">copy_from</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">original</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution.GraphColoringProblemIntSolution.copy_from" title="Link to this definition"></a></dt>
+<dd><p>Copy all data from the original target solution.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution.GraphColoringProblemIntSolution.decode_color">
+<span class="sig-name descname"><span class="pre">decode_color</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">representation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">vertex</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span></span><a class="headerlink" href="#opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution.GraphColoringProblemIntSolution.decode_color" title="Link to this definition"></a></dt>
+<dd><p>Decode the color assigned to one graph vertex.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution.GraphColoringProblemIntSolution.decode_coloring">
+<span class="sig-name descname"><span class="pre">decode_coloring</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">representation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">number_of_vertices</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#list" title="(in Python v3.14)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution.GraphColoringProblemIntSolution.decode_coloring" title="Link to this definition"></a></dt>
+<dd><p>Decode colors of all graph vertices.</p>
+<p>The number of vertices is passed explicitly so that vertices assigned
+color zero are not omitted from the decoded representation.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution.GraphColoringProblemIntSolution.init_from">
+<span class="sig-name descname"><span class="pre">init_from</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">representation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">problem</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Problem</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution.GraphColoringProblemIntSolution.init_from" title="Link to this definition"></a></dt>
+<dd><p>Initialization of the solution by setting its native representation.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution.GraphColoringProblemIntSolution.init_random">
+<span class="sig-name descname"><span class="pre">init_random</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">problem</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Problem</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution.GraphColoringProblemIntSolution.init_random" title="Link to this definition"></a></dt>
+<dd><p>Random initialization of the solution.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution.GraphColoringProblemIntSolution.is_better_than">
+<span class="sig-name descname"><span class="pre">is_better_than</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution.GraphColoringProblemIntSolution" title="opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution.GraphColoringProblemIntSolution"><span class="pre">GraphColoringProblemIntSolution</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.14)"><span class="pre">bool</span></a></span></span><a class="headerlink" href="#opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution.GraphColoringProblemIntSolution.is_better_than" title="Link to this definition"></a></dt>
+<dd><p>Compare two solutions by fitness value.</p>
+<p>A larger fitness value represents a better solution.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution.GraphColoringProblemIntSolution.native_representation">
+<span class="sig-name descname"><span class="pre">native_representation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">representation_str</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span></span><a class="headerlink" href="#opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution.GraphColoringProblemIntSolution.native_representation" title="Link to this definition"></a></dt>
+<dd><p>Native solution representation from its string representation.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution.GraphColoringProblemIntSolution.representation_distance_directly">
+<span class="sig-name descname"><span class="pre">representation_distance_directly</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">solution_code_1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">solution_code_2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span></span><a class="headerlink" href="#opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution.GraphColoringProblemIntSolution.representation_distance_directly" title="Link to this definition"></a></dt>
+<dd><p>Bitwise Hamming distance between two integer solution codes.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution.GraphColoringProblemIntSolution.string_rep">
+<span class="sig-name descname"><span class="pre">string_rep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">delimiter</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'\n'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indentation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">indentation_symbol</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'</span>&#160;&#160; <span class="pre">'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_start</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'{'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group_end</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'}'</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.14)"><span class="pre">str</span></a></span></span><a class="headerlink" href="#opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution.GraphColoringProblemIntSolution.string_rep" title="Link to this definition"></a></dt>
+<dd><p>String representation of the solution instance.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution.GraphColoringProblemIntSolution.used_colors_count">
+<span class="sig-name descname"><span class="pre">used_colors_count</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">representation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">problem</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem.GraphColoringProblem" title="opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem.GraphColoringProblem"><span class="pre">GraphColoringProblem</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span></span><a class="headerlink" href="#opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution.GraphColoringProblemIntSolution.used_colors_count" title="Link to this definition"></a></dt>
+<dd><p>Return the number of valid colors used by the representation.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution.GraphColoringProblemIntSolution.value">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">value</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></em><a class="headerlink" href="#opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution.GraphColoringProblemIntSolution.value" title="Link to this definition"></a></dt>
+<dd><p>Value used by metaheuristic optimizers.</p>
+<p>Since fitness is maximized by the optimizers, value is equal to the
+fitness value. For this minimization problem fitness is the negative
+objective value.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-opt.single_objective.comb.graph_coloring_problem.solver">
+<span id="opt-single-objective-comb-graph-coloring-problem-solver-module"></span><h2>opt.single_objective.comb.graph_coloring_problem.solver module<a class="headerlink" href="#module-opt.single_objective.comb.graph_coloring_problem.solver" title="Link to this heading"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="opt.single_objective.comb.graph_coloring_problem.solver.build_parser">
+<span class="sig-prename descclassname"><span class="pre">opt.single_objective.comb.graph_coloring_problem.solver.</span></span><span class="sig-name descname"><span class="pre">build_parser</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser" title="(in Python v3.14)"><span class="pre">ArgumentParser</span></a></span></span><a class="headerlink" href="#opt.single_objective.comb.graph_coloring_problem.solver.build_parser" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opt.single_objective.comb.graph_coloring_problem.solver.encoded_dimension">
+<span class="sig-prename descclassname"><span class="pre">opt.single_objective.comb.graph_coloring_problem.solver.</span></span><span class="sig-name descname"><span class="pre">encoded_dimension</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">problem</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem.GraphColoringProblem" title="opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem.GraphColoringProblem"><span class="pre">GraphColoringProblem</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span></span><a class="headerlink" href="#opt.single_objective.comb.graph_coloring_problem.solver.encoded_dimension" title="Link to this definition"></a></dt>
+<dd><p>Return the number of bits used by the integer representation.</p>
+<p>The maximum number of available colors is equal to the number of graph
+vertices.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opt.single_objective.comb.graph_coloring_problem.solver.main">
+<span class="sig-prename descclassname"><span class="pre">opt.single_objective.comb.graph_coloring_problem.solver.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#opt.single_objective.comb.graph_coloring_problem.solver.main" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opt.single_objective.comb.graph_coloring_problem.solver.print_solution">
+<span class="sig-prename descclassname"><span class="pre">opt.single_objective.comb.graph_coloring_problem.solver.</span></span><span class="sig-name descname"><span class="pre">print_solution</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">problem</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem.GraphColoringProblem" title="opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem.GraphColoringProblem"><span class="pre">GraphColoringProblem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">optimizer</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">best_solution</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution.GraphColoringProblemIntSolution" title="opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution.GraphColoringProblemIntSolution"><span class="pre">GraphColoringProblemIntSolution</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.14)"><span class="pre">None</span></a></span></span><a class="headerlink" href="#opt.single_objective.comb.graph_coloring_problem.solver.print_solution" title="Link to this definition"></a></dt>
+<dd><p>Print optimization results.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opt.single_objective.comb.graph_coloring_problem.solver.solve_sa">
+<span class="sig-prename descclassname"><span class="pre">opt.single_objective.comb.graph_coloring_problem.solver.</span></span><span class="sig-name descname"><span class="pre">solve_sa</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">problem</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem.GraphColoringProblem" title="opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem.GraphColoringProblem"><span class="pre">GraphColoringProblem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">evaluations_max</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">initial_temp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">decay_factor</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.14)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><span class="pre">SaOptimizer</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution.GraphColoringProblemIntSolution" title="opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution.GraphColoringProblemIntSolution"><span class="pre">GraphColoringProblemIntSolution</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#opt.single_objective.comb.graph_coloring_problem.solver.solve_sa" title="Link to this definition"></a></dt>
+<dd><p>Solve the Graph Coloring Problem using Simulated Annealing.</p>
+<p>The maximum number of available colors is automatically set to the number
+of graph vertices. The objective function minimizes the number of colors
+used while penalizing invalid colors and conflicts.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="opt.single_objective.comb.graph_coloring_problem.solver.solve_vns">
+<span class="sig-prename descclassname"><span class="pre">opt.single_objective.comb.graph_coloring_problem.solver.</span></span><span class="sig-name descname"><span class="pre">solve_vns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">problem</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem.GraphColoringProblem" title="opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem.GraphColoringProblem"><span class="pre">GraphColoringProblem</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_seed</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">evaluations_max</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">k_min</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">k_max</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.14)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><span class="pre">VnsOptimizer</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution.GraphColoringProblemIntSolution" title="opt.single_objective.comb.graph_coloring_problem.graph_coloring_problem_int_solution.GraphColoringProblemIntSolution"><span class="pre">GraphColoringProblemIntSolution</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#opt.single_objective.comb.graph_coloring_problem.solver.solve_vns" title="Link to this definition"></a></dt>
+<dd><p>Solve the Graph Coloring Problem using VNS.</p>
+<p>The maximum number of available colors is automatically set to the number
+of graph vertices. The objective function minimizes the number of colors
+used while penalizing invalid colors and conflicts.</p>
+</dd></dl>
+
+</section>
+<section id="module-opt.single_objective.comb.graph_coloring_problem">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-opt.single_objective.comb.graph_coloring_problem" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Vladimir Filipovic.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

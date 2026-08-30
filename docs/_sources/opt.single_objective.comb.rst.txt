@@ -11,6 +11,7 @@ Subpackages
    opt.single_objective.comb.ones_count_min_problem
    opt.single_objective.comb.set_covering_problem
    opt.single_objective.comb.traveling_salesperson_problem
+   opt.single_objective.comb.knapsack_problem
 
 Module contents
 ---------------
