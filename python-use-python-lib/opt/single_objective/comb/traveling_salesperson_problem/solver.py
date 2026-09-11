@@ -1,3 +1,7 @@
+"""
+.. _py_traveling_salesperson_problem_solver:
+"""
+
 import argparse
 from random import seed
 
@@ -48,6 +52,7 @@ def build_parser() -> argparse.ArgumentParser:
         help="Maximum number of evaluations.",
     )
 
+    # Tabu Search params
     parser.add_argument(
         "--tabu-tenure",
         type=int,

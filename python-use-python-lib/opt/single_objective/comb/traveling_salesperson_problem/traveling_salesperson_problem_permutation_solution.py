@@ -1,3 +1,7 @@
+"""
+..  _py_traveling_salesperson_problem_permutation_solution:
+"""
+
 import sys
 from pathlib import Path
 
@@ -22,6 +26,11 @@ from opt.single_objective.comb.traveling_salesperson_problem.traveling_salespers
 
 
 class TravelingSalespersonProblemPermutationSolution(Solution[list[int], list[int]]):
+    """
+    Permutation-based solution for the Traveling Salesperson Problem. The representation is a
+    list of city indices, describing the order in which cities are visited. The tour is closed --
+    the salesperson returns from the last city back to the first one.
+    """
 
     def __init__(
         self,
@@ -31,6 +40,9 @@ class TravelingSalespersonProblemPermutationSolution(Solution[list[int], list[in
         distance_calculation_cache_is_used: bool = False,
         distance_calculation_cache_max_size: int = 0
     ) -> None:
+        """
+        Create new `TravelingSalespersonProblemPermutationSolution` instance.
+        """
         if not isinstance(random_seed, int) and random_seed is not None:
             raise TypeError("Parameter 'random_seed' must be 'int' or 'None'.")
 
@@ -49,17 +61,29 @@ class TravelingSalespersonProblemPermutationSolution(Solution[list[int], list[in
         self.is_minimization = True
 
     def copy(self) -> "TravelingSalespersonProblemPermutationSolution":
+        """
+        Internal copy of the solution.
+        """
         sol = TravelingSalespersonProblemPermutationSolution(self.random_seed)
         sol.copy_from(self)
         return sol
 
     def copy_from(self, original) -> None:
+        """
+        Copy all data from the original target solution.
+        """
         super().copy_from(original)
 
     def argument(self, representation: list[int]) -> list[int]:
+        """
+        Convert internal representation to solution code.
+        """
         return list(representation)
 
     def init_random(self, problem: Problem) -> None:
+        """
+        Random initialization of the solution -- a random permutation of all cities.
+        """
         if not hasattr(problem, "dimension") or problem.dimension is None:
             raise ValueError("Can not randomly initialize solution without problem dimension.")
 
@@ -68,6 +92,9 @@ class TravelingSalespersonProblemPermutationSolution(Solution[list[int], list[in
         self.representation = representation
 
     def init_from(self, representation: list[int], problem: Problem) -> None:
+        """
+        Initialization of the solution by setting its native representation.
+        """
         if not isinstance(representation, list):
             raise TypeError("Parameter 'representation' must have type 'list'.")
         if sorted(representation) != list(range(problem.dimension)):
@@ -77,6 +104,9 @@ class TravelingSalespersonProblemPermutationSolution(Solution[list[int], list[in
         self.representation = list(representation)
 
     def tour_length(self, representation: list[int], problem: TravelingSalespersonProblem) -> float:
+        """
+        Total length of the closed tour described by the supplied permutation.
+        """
         n = len(representation)
         total = 0.0
         for k in range(n):
@@ -90,6 +120,11 @@ class TravelingSalespersonProblemPermutationSolution(Solution[list[int], list[in
         representation: list[int],
         problem: TravelingSalespersonProblem
     ) -> QualityOfSolution:
+        """
+        Fitness calculation of the TSP permutation solution. Every permutation is a feasible
+        tour, so feasibility is always `True`. Since the problem is a minimization problem,
+        fitness is the negated tour length (higher fitness is always better).
+        """
         if not isinstance(representation, list):
             raise TypeError("Parameter 'representation' must have type 'list'.")
         if not isinstance(problem, TravelingSalespersonProblem):
@@ -108,6 +143,9 @@ class TravelingSalespersonProblemPermutationSolution(Solution[list[int], list[in
         )
 
     def native_representation(self, representation_str: str) -> list[int]:
+        """
+        Native solution representation from its string representation, e.g. `"[0, 3, 1, 2]"`.
+        """
         if not isinstance(representation_str, str):
             raise TypeError("Parameter 'representation_str' must be 'str'.")
         stripped = representation_str.strip().lstrip("[").rstrip("]").strip()
@@ -120,6 +158,9 @@ class TravelingSalespersonProblemPermutationSolution(Solution[list[int], list[in
         solution_code_1: list[int],
         solution_code_2: list[int]
     ) -> int:
+        """
+        Number of positions at which the two permutations differ.
+        """
         if not isinstance(solution_code_1, list):
             raise TypeError("Parameter 'solution_code_1' should be 'list'.")
         if not isinstance(solution_code_2, list):
@@ -137,6 +178,9 @@ class TravelingSalespersonProblemPermutationSolution(Solution[list[int], list[in
         group_start: str = "{",
         group_end: str = "}"
     ) -> str:
+        """
+        String representation of the solution instance.
+        """
         s = group_start
         s += super().string_rep(
             delimiter=delimiter,
