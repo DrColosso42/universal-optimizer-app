@@ -1,10 +1,7 @@
 Traveling Salesperson Problem
-==============================
+=============================
 
-.. _module_traveling_salesperson_problem:
-
-Problem description
--------------------
+.. _Problem_Traveling_Salesperson_Problem:
 
 The Traveling Salesperson Problem (TSP) asks for the shortest cyclic tour
 through a given set of cities:
@@ -15,16 +12,28 @@ through a given set of cities:
 The TSP is NP-hard, so for larger instances it is solved heuristically.
 Candidate solutions are naturally represented as permutations of city indexes.
 
-In this application, the problem is represented by the
-:class:`opt.single_objective.comb.traveling_salesperson_problem.traveling_salesperson_problem.TravelingSalespersonProblem`
-class, while candidate solutions are represented with permutations of city
-indexes through the
-:class:`opt.single_objective.comb.traveling_salesperson_problem.traveling_salesperson_problem_permutation_solution.TravelingSalespersonProblemPermutationSolution`
-class.
+In this project, the problem is represented by the
+:class:`~opt.single_objective.comb.traveling_salesperson_problem.traveling_salesperson_problem.TravelingSalespersonProblem`
+class, while a solution with permutation representation is implemented in
+:class:`~opt.single_objective.comb.traveling_salesperson_problem.traveling_salesperson_problem_solution.TravelingSalespersonProblemSolution`.
 
 The objective value of a solution is the total length of the cyclic tour that
 its permutation describes, while its fitness value is the negated tour length,
 so that maximization of fitness corresponds to minimization of the tour length.
+
+Implemented approaches
+----------------------
+
+The following approaches are currently supported for solving the problem:
+
+- Genetic Algorithm (GA), with order (OX), partially mapped (PMX) and edge
+  recombination (ERX) crossover, swap, scramble and inversion mutation,
+  tournament or roulette selection, random or nearest-neighbor initialization,
+  and an optional delta-evaluated 2-opt sweep over the offspring (memetic GA)
+- Variable Neighborhood Search (VNS), with relocation shaking, best- and
+  first-improvement or-opt local search and a delta-evaluated 2-opt + or-opt
+  local search
+- Tabu Search (TS) over permutations
 
 Input file format
 -----------------

@@ -12,3 +12,4 @@ Problems to be solved
     problems_to_be_solved_branin
     problems_to_be_solved_drug_discovery_problem
     problems_to_be_solved_knapsack_problem
+    problems_to_be_solved_traveling_salesperson_problem
