@@ -168,7 +168,7 @@ visualization/knapsack/results_summary.csv
 comparison/traveling_thief_problem/results/
 visualization/traveling_thief_problem/results_summary.csv
 comparison/job_shop_scheduling_problem/results/
-visualization/job_shop_scheduling_problem/results_summary.csv
+visualization/job_shop_scheduling_problem/charts/
 outputs/ones_count_problem/dimension_25-vns-min-2023-07-03-13-39-50.702521.txt
 app/ones_count_problem/outputs/dimension_25-vns-max-2023-09-09-10-54-57.536320.txt
 app/ones_count_problem/outputs/dimension_25-vns-max-2023-09-09-10-54-57.750310.txt
