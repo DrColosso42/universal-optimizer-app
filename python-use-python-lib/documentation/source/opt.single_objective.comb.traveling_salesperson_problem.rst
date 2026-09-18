@@ -19,7 +19,7 @@ In this application, the problem is represented by the
 :class:`opt.single_objective.comb.traveling_salesperson_problem.traveling_salesperson_problem.TravelingSalespersonProblem`
 class, while candidate solutions are represented with permutations of city
 indexes through the
-:class:`opt.single_objective.comb.traveling_salesperson_problem.traveling_salesperson_problem_permutation_solution.TravelingSalespersonProblemPermutationSolution`
+:class:`opt.single_objective.comb.traveling_salesperson_problem.traveling_salesperson_problem_solution.TravelingSalespersonProblemSolution`
 class.
 
 The objective value of a solution is the total length of the cyclic tour that
@@ -53,7 +53,6 @@ The following approaches are currently supported for solving the problem:
   initialization of the population
 - Variable Neighborhood Search (VNS) -- relocation shaking with growing kick
   strength and a delta-evaluated 2-opt + or-opt local search
-- Tabu Search (TS) over permutations
 
 Examples of use
 ---------------
@@ -62,7 +61,6 @@ Examples are available in the project root directory:
 
 - ``opt_so_comb_traveling_salesperson_ga_perm_exec.py``
 - ``opt_so_comb_traveling_salesperson_vns_perm_exec.py``
-- ``opt_so_comb_traveling_salesperson_tabu_search_permutation_exec.py``
 
 Solver
 ------
@@ -86,16 +84,6 @@ Example usage with Variable Neighborhood Search:
    poetry run python -m opt.single_objective.comb.traveling_salesperson_problem.solver \
       --input-file opt/single_objective/comb/traveling_salesperson_problem/inputs/usa-1.txt \
       --method vns
-
-Example usage with Tabu Search:
-
-.. code-block:: bash
-
-   poetry run python -m opt.single_objective.comb.traveling_salesperson_problem.solver \
-      --input-file opt/single_objective/comb/traveling_salesperson_problem/inputs/usa-1.txt \
-      --method tabu \
-      --evaluations-max 20000 \
-      --tabu-tenure 10
 
 Modules
 -------
@@ -136,14 +124,6 @@ VNS support module
 ^^^^^^^^^^^^^^^^^^
 
 .. automodule:: opt.single_objective.comb.traveling_salesperson_problem.traveling_salesperson_problem_vns_support
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-Permutation solution module (tabu search)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. automodule:: opt.single_objective.comb.traveling_salesperson_problem.traveling_salesperson_problem_permutation_solution
    :members:
    :undoc-members:
    :show-inheritance:

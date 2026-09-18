@@ -26,14 +26,12 @@ Implemented approaches
 
 The following approaches are currently supported for solving the problem:
 
-- Genetic Algorithm (GA), with order (OX), partially mapped (PMX) and edge
-  recombination (ERX) crossover, swap, scramble and inversion mutation,
-  tournament or roulette selection, random or nearest-neighbor initialization,
-  and an optional delta-evaluated 2-opt sweep over the offspring (memetic GA)
-- Variable Neighborhood Search (VNS), with relocation shaking, best- and
-  first-improvement or-opt local search and a delta-evaluated 2-opt + or-opt
-  local search
-- Tabu Search (TS) over permutations
+- Genetic Algorithm (GA) -- a memetic algorithm with edge recombination
+  crossover (ERX), inversion mutation, a delta-evaluated 2-opt sweep over
+  each offspring, tournament selection, elitism and nearest-neighbor
+  initialization of the population
+- Variable Neighborhood Search (VNS) -- relocation shaking with growing kick
+  strength and a delta-evaluated 2-opt + or-opt local search
 
 Input file format
 -----------------
@@ -51,19 +49,6 @@ Example (3 cities):
    10 0 20
    15 20 0
 
-Implemented approaches
-----------------------
-
-The following approaches are currently supported for solving the problem:
-
-- Genetic Algorithm (GA) -- a memetic algorithm with edge recombination
-  crossover (ERX), inversion mutation, a delta-evaluated 2-opt sweep over
-  each offspring, tournament selection, elitism and nearest-neighbor
-  initialization of the population
-- Variable Neighborhood Search (VNS) -- relocation shaking with growing kick
-  strength and a delta-evaluated 2-opt + or-opt local search
-- Tabu Search (TS) over permutations
-
 Examples of use
 ---------------
 
@@ -71,7 +56,6 @@ Examples are available in the project root directory:
 
 - ``opt_so_comb_traveling_salesperson_ga_perm_exec.py``
 - ``opt_so_comb_traveling_salesperson_vns_perm_exec.py``
-- ``opt_so_comb_traveling_salesperson_tabu_search_permutation_exec.py``
 
 Solver
 ------
@@ -95,72 +79,3 @@ Example usage with Variable Neighborhood Search:
    poetry run python -m opt.single_objective.comb.traveling_salesperson_problem.solver \
       --input-file opt/single_objective/comb/traveling_salesperson_problem/inputs/usa-1.txt \
       --method vns
-
-Example usage with Tabu Search:
-
-.. code-block:: bash
-
-   poetry run python -m opt.single_objective.comb.traveling_salesperson_problem.solver \
-      --input-file opt/single_objective/comb/traveling_salesperson_problem/inputs/usa-1.txt \
-      --method tabu \
-      --evaluations-max 20000 \
-      --tabu-tenure 10
-
-Modules
--------
-
-Problem module
-^^^^^^^^^^^^^^
-
-.. automodule:: opt.single_objective.comb.traveling_salesperson_problem.traveling_salesperson_problem
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-Solution module
-^^^^^^^^^^^^^^^
-
-.. automodule:: opt.single_objective.comb.traveling_salesperson_problem.traveling_salesperson_problem_solution
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-GA support module
-^^^^^^^^^^^^^^^^^
-
-.. automodule:: opt.single_objective.comb.traveling_salesperson_problem.traveling_salesperson_problem_ga_support
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-GA selection module
-^^^^^^^^^^^^^^^^^^^
-
-.. automodule:: opt.single_objective.comb.traveling_salesperson_problem.traveling_salesperson_problem_ga_selection
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-VNS support module
-^^^^^^^^^^^^^^^^^^
-
-.. automodule:: opt.single_objective.comb.traveling_salesperson_problem.traveling_salesperson_problem_vns_support
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-Permutation solution module (tabu search)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. automodule:: opt.single_objective.comb.traveling_salesperson_problem.traveling_salesperson_problem_permutation_solution
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-Solver module
-^^^^^^^^^^^^^
-
-.. automodule:: opt.single_objective.comb.traveling_salesperson_problem.solver
-   :members:
-   :undoc-members:
-   :show-inheritance:

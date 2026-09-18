@@ -3,9 +3,9 @@
 
 The :mod:`~opt.single_objective.comb.traveling_salesperson_problem.traveling_salesperson_problem_ga_support`
 contains classes
-:class:`~opt.single_objective.comb.traveling_salesperson_problem.traveling_salesperson_problem_ga_support.TravelingSalespersonProblemGaCrossoverSupport`
+:class:`~opt.single_objective.comb.traveling_salesperson_problem.traveling_salesperson_problem_ga_support.TravelingSalespersonProblemGaCrossoverSupportErx`
 and
-:class:`~opt.single_objective.comb.traveling_salesperson_problem.traveling_salesperson_problem_ga_support.TravelingSalespersonProblemGaMutationSupport`,
+:class:`~opt.single_objective.comb.traveling_salesperson_problem.traveling_salesperson_problem_ga_support.TravelingSalespersonProblemGaMutationSupportInversion`,
 that represent supporting parts of the `GA` algorithm, where solution of the
 Traveling Salesperson Problem has permutation representation.
 """

@@ -5,7 +5,7 @@ The :mod:`~opt.single_objective.comb.traveling_salesperson_problem.traveling_sal
 contains classes
 :class:`~opt.single_objective.comb.traveling_salesperson_problem.traveling_salesperson_problem_vns_support.TravelingSalespersonProblemVnsShakingSupport`
 and
-:class:`~opt.single_objective.comb.traveling_salesperson_problem.traveling_salesperson_problem_vns_support.TravelingSalespersonProblemVnsLocalSearchSupport`,
+:class:`~opt.single_objective.comb.traveling_salesperson_problem.traveling_salesperson_problem_vns_support.TravelingSalespersonProblemVnsLocalSearchSupportDelta`,
 that represent supporting parts of the `VNS` algorithm, where solution of the
 Traveling Salesperson Problem has permutation representation.
 """
