@@ -205,7 +205,7 @@ class JobShopSchedulingProblemPermutationSolution(Solution[list[int], str]):
         :param list[int] representation: internal representation of the solution
         :param JobShopSchedulingProblem problem: problem that is solved
         :return: makespan, and the start and the end of every operation, keyed by the pair of
-        job index and index of the operation within that job
+            job index and index of the operation within that job
         :rtype: dict
         """
         if sorted(representation) != self.sorted_representation(problem):

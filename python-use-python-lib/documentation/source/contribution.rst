@@ -105,6 +105,22 @@ a. Contribution in solving **combinatorial** optimization problems:
         16. Entry point for the entire GUI solving this problem, in file :file:`opt_so_comb_drug_discovery_ga_exec.py`. All parameters that govern method execution are accessible to user through the graphical interface. - [LazarSavic]_
 
 
+    a.9. :ref:`Job Shop Scheduling Problem <Problem_Job_Shop_Scheduling>`:
+
+        1. Problem class, with reading of an instance from a textual file in the format of the OR-Library, and with a lower bound of the makespan derived from the longest job and the busiest machine - [NenadPesic]_
+
+        2. Solution class with permutation with repetition representation, the encoding of Bierwirth, together with the decoder that turns an encoding into a semi-active schedule - [NenadPesic]_
+
+        3. Simulated Annealing method, with solution that has permutation representation - [NenadPesic]_
+
+        4. Variable Neighborhood Search method, with solution that has permutation representation, in both the first improvement and the best improvement variant - [NenadPesic]_
+
+        5. Generational Genetic Algorithm method, with tournament selection and precedence preservative crossover, with solution that has permutation representation - [NenadPesic]_
+
+        6. Entry point of the all methods for solving this problem, in file :file:`/opt/single_objective/comb/job_shop_scheduling_problem/solver.py`. All parameters that governs method execution are accessible to user through command-line - [NenadPesic]_
+
+        7. Nine instances of the problem, taken from the OR-Library, together with one instance small enough for exhaustive search, which is used to test the decoder - [NenadPesic]_
+
 b. Contribution in solving **global** optimization problems:
 
 
@@ -130,3 +146,5 @@ Contributor List
 .. [MarkoLazarevic] Marko Lazarević, `<https://github.com/marko-lazarevic>`_ e-mail: mi21098@alas.matf.bg.ac.rs
 
 .. [StojanKostic] Stojan Kostić, `<https://github.com/Stojan-Kole>`_ e-mail: mi21131@alas.matf.bg.ac.rs
+
+.. [NenadPesic] Nenad Pešić, `<https://github.com/DrColosso42>`_ e-mail: mi22062@alas.matf.bg.ac.rs

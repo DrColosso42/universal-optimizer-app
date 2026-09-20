@@ -13,6 +13,7 @@ Subpackages
    opt.single_objective.comb.traveling_salesperson_problem
    opt.single_objective.comb.knapsack_problem
    opt.single_objective.comb.traveling_thief_problem
+   opt.single_objective.comb.job_shop_scheduling_problem
 
 Module contents
 ---------------
