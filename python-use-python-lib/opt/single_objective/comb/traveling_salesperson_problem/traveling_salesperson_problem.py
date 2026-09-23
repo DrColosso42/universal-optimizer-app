@@ -21,29 +21,38 @@ class TravelingSalespersonProblem(Problem):
     """
     Class representing the Traveling Salesperson Problem (TSP).
 
-    The problem is defined by a square matrix of distances between every pair of cities.
-    A solution is a permutation (visiting order) of all cities, and the tour is closed --
-    after visiting the last city, the salesperson returns to the first one. The goal is to
-    minimize the total length of the tour.
+    The problem is defined by a square matrix of distances between every pair of
+    cities. A solution is a permutation (visiting order) of all cities, and the
+    tour is closed -- after visiting the last city, the salesperson returns to
+    the first one. The goal is to minimize the total length of the tour.
     """
 
-    def __init__(self, distance_matrix: list[list[float]]) -> None:
+    def __init__(self, distances: list[list] = None,
+            distance_matrix: list[list] = None) -> None:
         """
         Create new `TravelingSalespersonProblem` instance.
 
-        :param list[list[float]] distance_matrix: square matrix, where `distance_matrix[i][j]`
-        is the distance between city `i` and city `j`
+        The distance matrix can be supplied under either parameter name --
+        `distances` or `distance_matrix` -- exactly one of them must be provided.
+
+        :param list[list] distances: square matrix, where `distances[i][j]` is
+            the distance between city `i` and city `j`
+        :param list[list] distance_matrix: alias for the `distances` parameter
         """
-        if not isinstance(distance_matrix, list):
-            raise TypeError("Parameter 'distance_matrix' for TravelingSalespersonProblem should be 'list'.")
-        if len(distance_matrix) < 2:
-            raise ValueError("Parameter 'distance_matrix' must describe at least two cities.")
-        dimension = len(distance_matrix)
-        for row in distance_matrix:
+        if distances is None:
+            distances = distance_matrix
+        if distances is None:
+            raise TypeError("Parameter 'distances' for TravelingSalespersonProblem should be 'list'.")
+        if not isinstance(distances, list):
+            raise TypeError("Parameter 'distances' for TravelingSalespersonProblem should be 'list'.")
+        if len(distances) < 2:
+            raise ValueError("Parameter 'distances' must describe at least two cities.")
+        dimension = len(distances)
+        for row in distances:
             if not isinstance(row, list):
-                raise TypeError("Each row of 'distance_matrix' should be 'list'.")
+                raise TypeError("Each row of 'distances' should be 'list'.")
             if len(row) != dimension:
-                raise ValueError("Parameter 'distance_matrix' must be a square matrix.")
+                raise ValueError("Parameter 'distances' must be a square matrix.")
             if any((not isinstance(d, (int, float)) or d < 0) for d in row):
                 raise ValueError("All distances must be non-negative numbers.")
 
@@ -53,7 +62,7 @@ class TravelingSalespersonProblem(Problem):
             is_multi_objective=False
         )
 
-        self.__distance_matrix = distance_matrix
+        self.__distances = distances
         self.__dimension = dimension
 
     def copy(self) -> "TravelingSalespersonProblem":
@@ -61,23 +70,28 @@ class TravelingSalespersonProblem(Problem):
         Copy the target problem.
         """
         return TravelingSalespersonProblem(
-            distance_matrix=[row.copy() for row in self.__distance_matrix]
+            distances=[row.copy() for row in self.__distances]
         )
 
     @classmethod
-    def from_distance_matrix(cls, distance_matrix: list[list[float]]) -> "TravelingSalespersonProblem":
+    def from_distance_matrix(cls, distances: list[list]) -> "TravelingSalespersonProblem":
         """
         Additional constructor when the distance matrix is specified directly.
+
+        :param list[list] distances: square matrix of distances between the cities
+        :return: class instance
+        :rtype: TravelingSalespersonProblem
         """
-        return cls(distance_matrix)
+        return cls(distances)
 
     @classmethod
-    def __load_from_file__(cls, input_file_path: str) -> list[list[float]]:
+    def __load_from_file__(cls, input_file_path: str) -> list[list]:
         """
         Static function that reads problem data from specified file.
 
-        Expected file format: `n` lines, each with `n` whitespace-separated numbers,
-        describing a square distance matrix.
+        Expected file format: `n` lines, each with `n` whitespace-separated
+        numbers, describing a square distance matrix. Lines starting with
+        '#' are treated as comments and skipped.
 
         Example (3 cities):
             0 10 15
@@ -86,43 +100,54 @@ class TravelingSalespersonProblem(Problem):
 
         :param str input_file_path: path to the input file
         :return: distance matrix
-        :rtype: list[list[float]]
+        :rtype: list[list]
         """
         logger.debug("Load parameters: input file path=" + str(input_file_path))
 
         with open(input_file_path, "r", encoding="utf-8") as file:
-            lines = [line.strip() for line in file if line.strip()]
+            lines = [
+                line.strip()
+                for line in file
+                if line.strip() and not line.strip().startswith("#")
+            ]
 
         if len(lines) == 0:
             raise ValueError("Input file must contain at least one line describing the distance matrix.")
 
-        distance_matrix: list[list[float]] = []
-        for line in lines:
-            parts = line.split()
-            row = [float(p) for p in parts]
-            distance_matrix.append(row)
+        def __parse_number(token: str) -> int | float:
+            try:
+                return int(token)
+            except ValueError:
+                return float(token)
 
-        return distance_matrix
+        return [[__parse_number(value) for value in line.split()] for line in lines]
 
     @classmethod
     def from_input_file(cls, input_file_path: str) -> "TravelingSalespersonProblem":
         """
         Additional constructor. Create new `TravelingSalespersonProblem` instance
-        when input file with the distance matrix is specified.
+        when the input file with the distance matrix is specified.
 
         :param str input_file_path: path to the input file
         :return: class instance
         :rtype: TravelingSalespersonProblem
         """
-        distance_matrix = cls.__load_from_file__(input_file_path)
-        return cls(distance_matrix=distance_matrix)
+        distances = cls.__load_from_file__(input_file_path)
+        return cls(distances=distances)
 
     @property
-    def distance_matrix(self) -> list[list[float]]:
+    def distances(self) -> list[list]:
         """
         Property getter for the distance matrix.
         """
-        return self.__distance_matrix
+        return self.__distances
+
+    @property
+    def distance_matrix(self) -> list[list]:
+        """
+        Property getter for the distance matrix (alias for `distances`).
+        """
+        return self.__distances
 
     @property
     def dimension(self) -> int:
@@ -140,7 +165,7 @@ class TravelingSalespersonProblem(Problem):
         :return: distance between the two cities
         :rtype: float
         """
-        return self.__distance_matrix[city_1][city_2]
+        return self.__distances[city_1][city_2]
 
     def string_rep(
         self,
@@ -161,7 +186,7 @@ class TravelingSalespersonProblem(Problem):
         s += delimiter
         s += "dimension=" + str(self.__dimension)
         s += delimiter
-        s += "distance_matrix=" + str(self.__distance_matrix)
+        s += "distances=" + str(self.__distances)
         s += group_end
         return s
 
