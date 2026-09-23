@@ -18,9 +18,23 @@ class TestTravelingSalespersonProblem(unittest.TestCase):
         problem = TravelingSalespersonProblem(matrix)
 
         self.assertEqual(problem.distance_matrix, matrix)
+        self.assertEqual(problem.distances, matrix)
         self.assertEqual(problem.dimension, 3)
         self.assertTrue(problem.is_minimization)
         self.assertFalse(problem.is_multi_objective)
+        self.assertEqual(problem.name, "TravelingSalespersonProblem")
+
+    def test_initialize_instance_with_distances_keyword(self):
+        matrix = [
+            [0, 2, 9],
+            [2, 0, 6],
+            [9, 6, 0],
+        ]
+        problem = TravelingSalespersonProblem(distances=matrix)
+
+        self.assertEqual(problem.distances, matrix)
+        self.assertEqual(problem.distance_matrix, matrix)
+        self.assertEqual(problem.dimension, 3)
 
     def test_distance_returns_matrix_entry(self):
         matrix = [
@@ -60,21 +74,45 @@ class TestTravelingSalespersonProblem(unittest.TestCase):
         self.assertEqual(problem.distance_matrix, matrix)
         self.assertEqual(problem.dimension, 3)
 
+    def test_from_distance_matrix_with_distances_keyword(self):
+        problem = TravelingSalespersonProblem.from_distance_matrix(
+            distances=[[0, 1], [1, 0]]
+        )
+
+        self.assertEqual(problem.distances, [[0, 1], [1, 0]])
+        self.assertEqual(problem.dimension, 2)
+
     def test_distance_matrix_type_error(self):
         with self.assertRaises(TypeError):
             TravelingSalespersonProblem("not a list")
+
+    def test_distances_type_error(self):
+        with self.assertRaises(TypeError):
+            TravelingSalespersonProblem("0 2 9")
 
     def test_distance_matrix_must_have_at_least_two_cities(self):
         with self.assertRaises(ValueError):
             TravelingSalespersonProblem([[0]])
 
-    def test_distance_matrix_must_be_square(self):
+    def test_distances_must_have_at_least_two_cities(self):
         with self.assertRaises(ValueError):
-            TravelingSalespersonProblem([[0, 1], [1, 0, 5]])
+            TravelingSalespersonProblem([])
 
     def test_distance_matrix_row_type_error(self):
         with self.assertRaises(TypeError):
             TravelingSalespersonProblem([[0, 1], "not a list"])
+
+    def test_distances_must_be_list_of_lists(self):
+        with self.assertRaises(TypeError):
+            TravelingSalespersonProblem([0, 2, 9])
+
+    def test_distance_matrix_must_be_square(self):
+        with self.assertRaises(ValueError):
+            TravelingSalespersonProblem([[0, 1], [1, 0, 5]])
+
+    def test_distances_must_be_square_matrix(self):
+        with self.assertRaises(ValueError):
+            TravelingSalespersonProblem([[0, 2, 9], [2, 0], [9, 6, 0]])
 
     def test_distance_matrix_must_be_non_negative(self):
         with self.assertRaises(ValueError):
@@ -96,6 +134,38 @@ class TestTravelingSalespersonProblem(unittest.TestCase):
         self.assertEqual(problem.dimension, 3)
         self.assertEqual(problem.distance(0, 1), 10.0)
         self.assertEqual(problem.distance(1, 2), 20.0)
+
+    def test_from_input_file_with_comment_lines(self):
+        content = "\n".join([
+            "# instance with comments",
+            "0 10 15",
+            "10 0 20",
+            "# trailing comment",
+            "15 20 0",
+        ])
+
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            input_path = Path(tmp_dir) / "tsp.txt"
+            input_path.write_text(content, encoding="utf-8")
+
+            problem = TravelingSalespersonProblem.from_input_file(str(input_path))
+
+        self.assertEqual(problem.dimension, 3)
+        self.assertEqual(problem.distance(0, 1), 10)
+
+    def test_from_input_file_with_ragged_rows(self):
+        content = "\n".join([
+            "0 2 9",
+            "2 0",
+            "9 6 0",
+        ])
+
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            input_path = Path(tmp_dir) / "tsp.txt"
+            input_path.write_text(content, encoding="utf-8")
+
+            with self.assertRaises(ValueError):
+                TravelingSalespersonProblem.from_input_file(str(input_path))
 
     def test_from_input_file_raises_for_missing_file(self):
         with self.assertRaises(FileNotFoundError):
